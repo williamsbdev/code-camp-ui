@@ -2,14 +2,17 @@ language: node_js
 node_js:
 - '0.12'
 sudo: false
+before_deploy: "ember build --env=production"
 deploy:
   provider: s3
   access_key_id: AKIAIYKAVNHMDB5MO2NQ
-  bucket: codecamp.williamsbdev.com
   secret_access_key:
-    secure: xh/PWjlcDZWv1lFE+jVO8fzW3MU+Qoh1Vdhf8yezhiQIWjHY85Uw11Vykt8adw6QM6XTMUqJ7nPM57eV9yzk2Pf7kwGKDL2Y6cGOZnRgU5vzVj9qRh1FFKHWRPS3DCriFMLJCbx9afRy86mfbp905zUIHCOP8AC9YRkoVpbYoGJylCVo1nJ9uV3fNCm3whqAowQYCYvA0CShDSwz0o6YyXBJKuhC18xTyZXfjYo9jDpOFT2Y5XMiWnvc49fgS0ZHDo7tcqs7a/WudR7gRL1AsQ9PyAsnSj3bSrjzZfpI2AareEGKzt7FEBHFx0XrEYYNDFUaKf2MlN4gg5AdeXTcs7jTpGO11VRo8M3FkBp+94H1Vlmd0nICjdXPO8RowDW6wp1LSkrDgsrMVTrk+naW3qo6ayMXCI+EN9IbHVQwBfWBIUs6+jHmYVDWK7qjDThkjiVce6Ki7L6zbJV62gf2k0PNBCe2r3vHn6PO4QtPQHEbBZm8X9Lkr1d1X4mpureWkqAJWdGeuIs2E+9gIrl+UOg+0IzffI5TeMTDp3smaVIE2FvALIdUTWxmaSbi8bVQovZmPpEGGDK8CyiECyHOBfTykuJAJOQ3I1F93waqbvng+NhQzVNbcdsg7/KTP7S2F1QlVKsNpThtLpCeDOEfawe6ZhfWpNZCDozcqfs/Nr4=
-  region: us-west-2
-  local_dir: dist
+    secure: yeDVCL9pnlEio9rMkIRoFmu0bCl6VE6/TFEV6MXWEm0vU7y/Rl4nlJJZRFHGkPOwo5oR52O8SIWzieJQRQD0jRPgNYhjKhcfWPh4MyyFyzNPscOKg5EZ0gZt1/nDGOfroxVACMHZHgxdWRHvZJ1JDVgUJBXgHX/a6pIa8WuRNMjjRcUctGk4mPmtsrZgf5eSYDE296ZHCoWMRIYxS1JYmKuBjG3zrHVPEvSCn1sjoJgygIQfgy7XiMAoBYkgVXG2eoZsVlVKy4rx9j9dTLrXfFyHvqfrGdGQ6ROX8/Ttpd2ls0YSK5aarxeDocHeCyyNN4E/OS2722INJQE8kLwrjH/ez2eFYpjOpHA482Y9ezHQD8q14iZuURR/cNBTB/9Q6RwJHqrCl4BecHx2B5KGaQ5JS5ZgaC2hb1sIfo2HzefoknAK3ii300dXtS2R8EUe7GMT/i21wZurrBwvzk5lSh40aqQmvbctbeadXcY+HJ1SjMWVOlmACQ2jtm0jvMASNfRHUgvYtigadszTS+9e7N83WCzBPlNgsK/SFWShAd+G9pSrOg7WHGU65FserGAAkSgJFPnb22z1+xH7Mash8ioeVq8Zlj5jFhhvI2bEzpI/a+oogyHSQeGayKztk//XvIIzIMf/PMMi9YuV0sDNkWuSYjItp+aIfth4ND9NuJ8=
+  bucket: codecamp.williamsbdev.com
+  local-dir: dist
+  acl: ''
+  on:
+    repo: williamsbdev/code-camp-ui
 cache:
   directories:
   - node_modules
