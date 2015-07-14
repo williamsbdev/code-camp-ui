@@ -10,7 +10,6 @@ deploy:
     secure: yeDVCL9pnlEio9rMkIRoFmu0bCl6VE6/TFEV6MXWEm0vU7y/Rl4nlJJZRFHGkPOwo5oR52O8SIWzieJQRQD0jRPgNYhjKhcfWPh4MyyFyzNPscOKg5EZ0gZt1/nDGOfroxVACMHZHgxdWRHvZJ1JDVgUJBXgHX/a6pIa8WuRNMjjRcUctGk4mPmtsrZgf5eSYDE296ZHCoWMRIYxS1JYmKuBjG3zrHVPEvSCn1sjoJgygIQfgy7XiMAoBYkgVXG2eoZsVlVKy4rx9j9dTLrXfFyHvqfrGdGQ6ROX8/Ttpd2ls0YSK5aarxeDocHeCyyNN4E/OS2722INJQE8kLwrjH/ez2eFYpjOpHA482Y9ezHQD8q14iZuURR/cNBTB/9Q6RwJHqrCl4BecHx2B5KGaQ5JS5ZgaC2hb1sIfo2HzefoknAK3ii300dXtS2R8EUe7GMT/i21wZurrBwvzk5lSh40aqQmvbctbeadXcY+HJ1SjMWVOlmACQ2jtm0jvMASNfRHUgvYtigadszTS+9e7N83WCzBPlNgsK/SFWShAd+G9pSrOg7WHGU65FserGAAkSgJFPnb22z1+xH7Mash8ioeVq8Zlj5jFhhvI2bEzpI/a+oogyHSQeGayKztk//XvIIzIMf/PMMi9YuV0sDNkWuSYjItp+aIfth4ND9NuJ8=
   bucket: codecamp.williamsbdev.com
   local-dir: dist
-  acl: ''
   on:
     repo: williamsbdev/code-camp-ui
 cache:
